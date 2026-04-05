@@ -1,14 +1,7 @@
-let openMenu = document.getElementById("open");
-let responsiveMenu = document.getElementById("responsive-menu");
-function hover() {
-  openMenu.classList.remove("hidden");
+let sidebarMenu = document.getElementById("sidebar");
+function showSidebar() {
+  sidebarMenu.classList.remove("hidden");
 }
-function hideNav() {
-  openMenu.classList.add("hidden");
-}
-function showMenu() {
-  responsiveMenu.classList.replace("hidden", "flex");
-}
-function hideMenu() {
-  responsiveMenu.classList.replace("flex", "hidden");
+function closeSidebar() {
+  sidebarMenu.classList.add("hidden");
 }

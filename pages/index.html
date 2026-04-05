@@ -7,8 +7,8 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="md:block hidden">
-      <nav class="w-10/12 mx-auto h-20 p-2">
+    <header>
+      <nav class="md:block hidden w-10/12 mx-auto h-20 py-2">
         <!-- Container -->
         <div class="flex gap-x-8 lg:gap-x-12 h-full items-center">
           <!-- Logo -->
@@ -45,7 +45,92 @@
           </div>
         </div>
       </nav>
+      <!-- Responsive-navbar -->
+      <nav class="md:hidden block">
+        <section class="w-11/12 mx-auto py-2 h-20">
+          <!-- Container -->
+          <div class="h-full flex items-center justify-between">
+            <!-- Menu -->
+            <div>
+              <button onclick="showSidebar()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  ></path>
+                </svg>
+              </button>
+              <!-- Sidebar -->
+              <aside
+                class="absolute top-0 right-0 h-screen w-full bg-white/50 backdrop-blur-sm z-50 hidden"
+                id="sidebar"
+              >
+                <div class="bg-gray-200 w-3/5 sm:w-2/5 p-4 h-full">
+                  <!-- Close-button -->
+                  <button onclick="closeSidebar()">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-8"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18 18 6M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </button>
+                  <!-- Links -->
+                  <div class="flex flex-col gap-y-2">
+                    <a href=""> صفحه اصلی </a>
+                    <a href="" class="flex items-center gap-x-1">
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          x-bind:class="isActive?'rotate-180':''"
+                          class="size-4 transition-all duration-300"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span>محصولات</span>
+                    </a>
+                    <a href="">درباره ما</a>
+                    <a href="">تماس با ما</a>
+                    <a href="">رویداد ها</a>
+                    <a href="">گواهینامه ها</a>
+                  </div>
+                </div>
+              </aside>
+            </div>
+            <!-- Logo -->
+            <div class="h-full">
+              <img src="../assets/images/logo/Logo.png" alt="" class="h-full" />
+            </div>
+          </div>
+        </section>
+      </nav>
     </header>
+
     <script src="../assets/js/main.js"></script>
   </body>
 </html>
