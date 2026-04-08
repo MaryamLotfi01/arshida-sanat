@@ -7,8 +7,8 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <nav class="md:block hidden w-10/12 mx-auto h-20 py-2">
+    <header class="fixed top-0 bg-white w-full">
+      <nav class="md:block hidden w-10/12 mx-auto h-[72px] py-2">
         <!-- Container -->
         <div class="flex gap-x-8 lg:gap-x-12 h-full items-center">
           <!-- Logo -->
@@ -47,7 +47,7 @@
       </nav>
       <!-- Responsive-navbar -->
       <nav class="md:hidden block">
-        <section class="w-11/12 mx-auto py-2 h-20">
+        <section class="w-11/12 mx-auto py-2 h-[72px]">
           <!-- Container -->
           <div class="h-full flex items-center justify-between">
             <!-- Menu -->
@@ -130,6 +130,179 @@
         </section>
       </nav>
     </header>
+    <main>
+      <!-- Banner -->
+      <section>
+        <div
+          class="w-full h-screen bg-cover bg-center"
+          style="background-image: url(../assets/images/2-min.jpg)"
+        ></div>
+      </section>
+      <!-- About-us -->
+      <section class="mt-16 w-10/12 mx-auto flex">
+        <div>
+          <!-- Icon -->
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="size-10 text-secondary"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              ></path>
+            </svg>
+          </span>
+        </div>
+        <!-- Content -->
+        <div class="flex flex-col gap-y-4">
+          <h1 class="text-3xl font-semibold">
+            شرکت فنی و مهندسی آرشیدا صنعت اسپادانا
+          </h1>
+          <p class="text-sm text-gray-800 text-justify">
+            شرکت فنی و مهندسی آرشیدا صنعت اسپادانا به عنوان یکی از شرکت های دانش
+            بنیان کشور با بهره مندی از دانش فنی متخصصان می باشد و مجموعه ای از
+            تجهیزات اختصاصی فورج، امکانات تحقیقاتی و آزمایشگاهی را شامل می شود.
+            این شرکت با بیش از یک دهه تجربه، توانایی تولید طیف وسیعی از اقلام
+            شامل انواع فلنج، اتصالات و رینگ های صنعتی فورج مورد نیاز در پروژه
+            های مختلف صنعتی کشور در صنایع نفت ، گاز ، پالایش ، پتروشیمی،
+            نیروگاهی و دیگر صنایع تاسیساتی را دارد. با عضویت در فهرست بلند
+            سازندگان داخلی وزارت نفت یکی از توانمند ترین تولید کنندگان این
+            محصولات در کشور می باشد.
+          </p>
+          <!-- Images -->
+          <div class="grid grid-cols-4 grid-rows-2 aspect-[16/6] gap-1">
+            <div
+              style="background-image: url(../assets/images/ver-3.png)"
+              class="bg-cover row-span-2 bg-center"
+            ></div>
+            <div
+              style="background-image: url(../assets/images/sq-1.png)"
+              class="bg-cover"
+            ></div>
+            <div
+              style="background-image: url(../assets/images/sq-2.png)"
+              class="bg-cover"
+            ></div>
+            <div
+              style="background-image: url(../assets/images/ver-6.png)"
+              class="bg-cover row-span-2"
+            ></div>
+            <div
+              style="background-image: url(../assets/images/vid-40.png)"
+              class="bg-cover col-span-2"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- Products -->
+      <section class="w-10/12 mx-auto mt-16 flex">
+        <!-- Icon -->
+        <div>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="size-10 text-secondary"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              ></path>
+            </svg>
+          </span>
+        </div>
+        <!-- Content -->
+        <div class="flex flex-col gap-y-4 grow">
+          <h1 class="text-3xl font-semibold">محصولات منتخب</h1>
+          <p class="text-sm text-gray-800 text-justify">
+            تجهیزات اختصاصی فورج نظیر انواع چکش ها، پرس های ضربه ای و هیدرولیک،
+            دستگاه رول فورج و کوره های عملیات حرارتی، رینگ رولینگ، دستگاه های
+            تراش و فرز CNC پیشرفته می باشد.
+          </p>
+          <!-- Products-items -->
+          <div class="flex gap-2 flex-col md:flex-row">
+            <div class="flex flex-col items-center flex-1 bg-gray-100 p-2">
+              <div
+                style="
+                  background-image: url(../assets/images/blind\ flange-min.png);
+                  background-size: 200%;
+                "
+                class="aspect-[5/4] w-full bg-center"
+              ></div>
+              <div class="flex flex-col gap-y-2 w-full items-center">
+                <h1 class="text-xl font-semibold">فلنج اسلیپون</h1>
+                <a
+                  href="#"
+                  class="bg-secondary text-primary w-full text-center p-1 rounded-sm text-sm"
+                  >مشاهده</a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col items-center flex-1 bg-gray-100 p-2">
+              <div
+                style="
+                  background-image: url(../assets/images/blind\ flange-min.png);
+                  background-size: 200%;
+                "
+                class="aspect-[5/4] w-full bg-center"
+              ></div>
+              <div class="flex flex-col gap-y-2 w-full items-center">
+                <h1 class="text-xl font-semibold">فلنج اسلیپون</h1>
+                <a
+                  href="#"
+                  class="bg-secondary text-primary w-full text-center p-1 rounded-sm text-sm"
+                  >مشاهده</a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col items-center flex-1 bg-gray-100 p-2">
+              <div
+                style="
+                  background-image: url(../assets/images/blind\ flange-min.png);
+                  background-size: 200%;
+                "
+                class="aspect-[5/4] w-full bg-center"
+              ></div>
+              <div class="flex flex-col gap-y-2 w-full items-center">
+                <h1 class="text-xl font-semibold">فلنج اسلیپون</h1>
+                <a
+                  href="#"
+                  class="bg-secondary text-primary w-full text-center p-1 rounded-sm text-sm"
+                  >مشاهده</a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col items-center flex-1 bg-gray-100 p-2">
+              <div
+                style="
+                  background-image: url(../assets/images/blind\ flange-min.png);
+                  background-size: 200%;
+                "
+                class="aspect-[5/4] w-full bg-center"
+              ></div>
+              <div class="flex flex-col gap-y-2 w-full items-center">
+                <h1 class="text-xl font-semibold">فلنج اسلیپون</h1>
+                <a
+                  href="#"
+                  class="bg-secondary text-primary w-full text-center p-1 rounded-sm text-sm"
+                  >مشاهده</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="../assets/js/main.js"></script>
   </body>
