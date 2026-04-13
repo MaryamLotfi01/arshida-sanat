@@ -45,4 +45,22 @@
   .navbar-links-container a.active {
     @apply border-secondary;
   }
+  .about-us-divider > div {
+    @apply border-x-2 border-secondary;
+  }
+  .about-us-divider > div:nth-child(1) {
+    @apply border-r-2 border-secondary;
+  }
+  .about-us-logos div {
+    @apply h-full;
+  }
+  .about-us-logos div {
+    @apply flex-1 flex justify-center;
+  }
+  .about-us-images div {
+    @apply aspect-video sm:aspect-[1/2] lg:aspect-auto;
+  }
+  .about-us-logos img {
+    @apply h-32;
+  }
 }

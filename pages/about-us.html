@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="fixed top-0 bg-white w-full">
+      <nav class="md:block hidden w-10/12 mx-auto h-[72px] py-2">
+        <!-- Container -->
+        <div class="flex gap-x-8 lg:gap-x-12 h-full items-center">
+          <!-- Logo -->
+          <div class="h-full">
+            <img src="../assets/images/logo/Logo.png" alt="" class="h-full" />
+          </div>
+          <!-- Links -->
+          <div class="navbar-links-container">
+            <a href="" class="active"> صفحه اصلی </a>
+            <a href="" class="flex items-center gap-x-1">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  x-bind:class="isActive?'rotate-180':''"
+                  class="size-4 transition-all duration-300"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  ></path>
+                </svg>
+              </span>
+              <span>محصولات</span>
+            </a>
+            <a href="" class="">درباره ما</a>
+            <a href="" class="">تماس با ما</a>
+            <a href="" class="">رویداد ها</a>
+            <a href="" class="">گواهینامه ها</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Responsive-navbar -->
+      <nav class="md:hidden block">
+        <section class="w-11/12 mx-auto py-2 h-[72px]">
+          <!-- Container -->
+          <div class="h-full flex items-center justify-between">
+            <!-- Menu -->
+            <div>
+              <button onclick="showSidebar()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  ></path>
+                </svg>
+              </button>
+              <!-- Sidebar -->
+              <aside
+                class="absolute top-0 right-0 h-screen w-full bg-white/50 backdrop-blur-sm z-50 hidden"
+                id="sidebar"
+              >
+                <div class="bg-gray-200 w-3/5 sm:w-2/5 p-4 h-full">
+                  <!-- Close-button -->
+                  <button onclick="closeSidebar()">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-8"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18 18 6M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </button>
+                  <!-- Links -->
+                  <div class="flex flex-col gap-y-2">
+                    <a href=""> صفحه اصلی </a>
+                    <a href="" class="flex items-center gap-x-1">
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          x-bind:class="isActive?'rotate-180':''"
+                          class="size-4 transition-all duration-300"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                          ></path>
+                        </svg>
+                      </span>
+                      <span>محصولات</span>
+                    </a>
+                    <a href="">درباره ما</a>
+                    <a href="">تماس با ما</a>
+                    <a href="">رویداد ها</a>
+                    <a href="">گواهینامه ها</a>
+                  </div>
+                </div>
+              </aside>
+            </div>
+            <!-- Logo -->
+            <div class="h-full">
+              <img src="../assets/images/logo/Logo.png" alt="" class="h-full" />
+            </div>
+          </div>
+        </section>
+      </nav>
+    </header>
+    <main>
+      <section class="mt-24 flex lg:w-10/12 w-11/12 mx-auto">
+        <div>
+          <!-- Icon -->
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="size-10 text-secondary"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              ></path>
+            </svg>
+          </span>
+        </div>
+        <!-- Content -->
+        <div class="flex flex-col gap-y-4">
+          <h1 class="text-3xl font-semibold">
+            شرکت فنی و مهندسی آرشیدا صنعت اسپادانا
+          </h1>
+          <div class="flex gap-x-4 flex-col lg:flex-row">
+            <!-- Right-side -->
+            <div class="basis-2/3 flex flex-col gap-y-6">
+              <p class="text-gray-800 text-justify leading-7">
+                شرکت فنی و مهندسی آرشیدا صنعت اسپادانا به عنوان یکی از شرکت های
+                دانش بنیان کشور با بهره مندی از دانش فنی متخصصان می باشد و
+                مجموعه ای از تجهیزات اختصاصی فورج، امکانات تحقیقاتی و آزمایشگاهی
+                را شامل می شود. این شرکت با بیش از یک دهه تجربه، توانایی تولید
+                طیف وسیعی از اقلام شامل انواع فلنج، اتصالات فشارقوی و رینگ های
+                صنعتی فورج مورد نیاز در پروژه های مختلف صنعتی کشور در صنایع نفت
+                ، گاز ، پالایش ، پتروشیمی، نیروگاهی و دیگر صنایع تاسیساتی را
+                دارد. با عضویت در فهرست بلند سازندگان داخلی وزارت نفت یکی از
+                توانمند ترین تولید کنندگان این محصولات در کشور می باشد.
+              </p>
+              <!-- Divider -->
+              <div class="flex about-us-divider flex-col md:flex-row">
+                <!-- Divide-1 -->
+                <div class="flex-1 flex flex-col items-center py-4">
+                  <h1 class="text-2xl text-secondary font-semibold">12 سال</h1>
+                  <p class="font-semibold text-gray-800">
+                    تجربه، کار و تلاش شبانه روزی
+                  </p>
+                </div>
+                <!-- Divide-2 -->
+                <div class="flex-1 flex flex-col items-center py-4">
+                  <h1 class="text-2xl text-secondary font-semibold">70 نفر</h1>
+                  <p class="font-semibold text-gray-800">
+                    افراد متخصص، پویا و متعهد
+                  </p>
+                </div>
+                <!-- Divide-3 -->
+                <div class="flex-1 flex flex-col items-center py-4">
+                  <h1 class="text-2xl text-secondary font-semibold">8000 تن</h1>
+                  <p class="font-semibold text-gray-800">
+                    تولید بومی محصولات مصرفی
+                  </p>
+                </div>
+              </div>
+              <!-- Description -->
+              <p class="text-gray-800 text-justify leading-7">
+                این مجموعه با مساحت 5000 متر مربع و بیش از 70 نفر نیروی انسانی
+                با بهره مندی از کادر فنی و مهندسی متخصص و با بکارگیری مجموعه ای
+                از تجهیزات، ماشین آلات فورج و ماشین کاری با هدف کارآفرینی،
+                استقلال یافتن از واردات با تکیه بر دانش فنی خود و ظرفیت سالیانه
+                بالغ بر 8000 تن توانسته است حجم وسیعی از محصولات مصرفی در صنایع
+                ذکر شده را با افزایش مقاومت و استحکام، کیفیت و دقت بالا ، افزایش
+                طول عمر، کاهش هزینه‌های تولید بومی سازی کند و در مسیر اشتغال
+                زایی و افزایش روز افزون تولیدات به فعالیت خود ادامه دهد.
+              </p>
+            </div>
+            <!-- Left-side -->
+            <div
+              class="basis-1/3 grid lg:grid-cols-2 lg:grid-rows-3 sm:grid-cols-4 grid-cols-2 gap-1 about-us-images"
+            >
+              <div
+                style="background-image: url(../assets/images/vid-40.png)"
+                class="bg-cover bg-center"
+              ></div>
+              <div
+                style="background-image: url(../assets/images/ver-6.png)"
+                class="bg-cover bg-center lg:row-span-2"
+              ></div>
+              <div
+                style="background-image: url(../assets/images/ver-3.png)"
+                class="bg-cover bg-center lg:row-span-2"
+              ></div>
+              <div
+                style="background-image: url(../assets/images/vid-38.png)"
+                class="bg-cover bg-center"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="mt-16 flex flex-col gap-y-4 lg:w-10/12 w-11/12 mx-auto">
+        <div class="flex">
+          <!-- Icon -->
+          <div>
+            <!-- Icon -->
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="size-10 text-secondary"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5 8.25 12l7.5-7.5"
+                ></path>
+              </svg>
+            </span>
+          </div>
+          <!-- Content -->
+          <div>
+            <h1 class="text-3xl font-semibold">
+              برخی از مشتریان آرشیدا صنعت اسپادانا
+            </h1>
+          </div>
+        </div>
+        <!-- Logos -->
+        <div
+          class="lg:flex lg:h-32 about-us-logos grid grid-cols-1 sm:grid-cols-2 gap-4"
+        >
+          <div>
+            <img src="../assets/images/ARISA1-3 (1).png" alt="" />
+          </div>
+          <div>
+            <img src="../assets/images/Arm-OEID200.png" alt="" />
+          </div>
+          <div>
+            <img src="../assets/images/canymes.png" alt="" />
+          </div>
+          <div>
+            <img src="../assets/images/Picture1-removebg-preview.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-16">
+      <div class="bg-black py-4">
+        <div
+          class="w-10/12 mx-auto text-white flex justify-between gap-y-4 items-center lg:flex-row flex-col"
+        >
+          <p class="">ما را در شبکه اجتماعی دنبال کنید</p>
+          <!-- Social-media -->
+          <div class="flex gap-x-4">
+            <a href="">
+              <svg
+                fill="currentColor"
+                class="size-6"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 310 310"
+                xml:space="preserve"
+              >
+                <g id="XMLID_801_">
+                  <path
+                    id="XMLID_802_"
+                    d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73
+		C77.16,101.969,74.922,99.73,72.16,99.73z"
+                  ></path>
+                  <path
+                    id="XMLID_803_"
+                    d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4
+		c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"
+                  ></path>
+                  <path
+                    id="XMLID_804_"
+                    d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599
+		c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319
+		c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995
+		C310,145.43,300.549,94.761,230.454,94.761z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+            <a href="">
+              <svg
+                fill="currentColor"
+                class="size-6"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 310 310"
+                xml:space="preserve"
+              >
+                <g id="XMLID_834_">
+                  <path
+                    id="XMLID_835_"
+                    d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
+		c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
+		V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545
+		C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703
+		c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+            <a href="">
+              <svg
+                fill="currentColor"
+                class="size-6"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 300 300"
+                xml:space="preserve"
+              >
+                <g id="XMLID_504_">
+                  <path
+                    id="XMLID_505_"
+                    d="M38.52,0.012h222.978C282.682,0.012,300,17.336,300,38.52v222.978c0,21.178-17.318,38.49-38.502,38.49
+		H38.52c-21.184,0-38.52-17.313-38.52-38.49V38.52C0,17.336,17.336,0.012,38.52,0.012z M218.546,33.329
+		c-7.438,0-13.505,6.091-13.505,13.525v32.314c0,7.437,6.067,13.514,13.505,13.514h33.903c7.426,0,13.506-6.077,13.506-13.514
+		V46.854c0-7.434-6.08-13.525-13.506-13.525H218.546z M266.084,126.868h-26.396c2.503,8.175,3.86,16.796,3.86,25.759
+		c0,49.882-41.766,90.34-93.266,90.34c-51.487,0-93.254-40.458-93.254-90.34c0-8.963,1.37-17.584,3.861-25.759H33.35v126.732
+		c0,6.563,5.359,11.902,11.916,11.902h208.907c6.563,0,11.911-5.339,11.911-11.902V126.868z M150.283,90.978
+		c-33.26,0-60.24,26.128-60.24,58.388c0,32.227,26.98,58.375,60.24,58.375c33.278,0,60.259-26.148,60.259-58.375
+		C210.542,117.105,183.561,90.978,150.283,90.978z"
+                  ></path>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-primary py-4">
+        <div class="w-10/12 mx-auto flex gap-8 lg:flex-row flex-col">
+          <!-- Right-side -->
+          <div class="flex flex-col lg:w-1/4 gap-y-4">
+            <!-- Logo -->
+            <div class="flex flex-col gap-y-1">
+              <a href="">
+                <img
+                  src="../assets/images/logo/logo-arshida.png"
+                  alt=""
+                  class="h-20"
+                />
+              </a>
+              <div class="h-0.5 w-40 bg-secondary"></div>
+            </div>
+            <p class="text-white text-xs text-justify">
+              شرکت فنی و مهندسی آرشیدا صنعت اسپادانا به عنوان یکی از شرکت های
+              دانش بنیان کشور با بهره مندی از دانش فنی متخصصان می باشد و مجموعه
+              ای از تجهیزات اختصاصی فورج، امکانات تحقیقاتی و آزمایشگاهی را شامل
+              می شود.
+            </p>
+          </div>
+          <!-- Left-side -->
+          <div
+            class="flex justify-between lg:w-3/4 lg:flex-row flex-col gap-y-8"
+          >
+            <!-- Pages -->
+            <div class="text-white flex flex-col gap-y-2">
+              <h1>صفحات</h1>
+              <div class="w-36 h-0.5 bg-secondary"></div>
+              <div class="text-xs flex flex-col gap-y-4">
+                <a href="">درباره ما</a>
+                <a href="">تماس با ما</a>
+                <a href="">گواهینامه</a>
+                <a href="">رویداد ها</a>
+              </div>
+            </div>
+            <!-- Links -->
+            <div class="text-white flex flex-col gap-y-2">
+              <h1>لینک های مفید</h1>
+              <div class="w-36 h-0.5 bg-secondary"></div>
+              <div class="text-xs flex flex-col gap-y-4">
+                <a href=""> وزارت صنعت معدن تجارت</a>
+                <a href="">پایگاه خبری اتاق بازرگانی</a>
+                <a href="">پایگاه اطلاع رسانی وزارت نفت</a>
+              </div>
+            </div>
+            <!-- Contact-us -->
+            <div class="text-white flex flex-col gap-y-2">
+              <h1>تماس با ما</h1>
+              <div class="w-36 h-0.5 bg-secondary"></div>
+              <div class="text-xs flex flex-col gap-y-4">
+                <p>
+                  <span class="text-secondary">نشانی کارخانه:</span>
+                  <span
+                    >اصفهان ، تیران ، شهرک صنعتی تیران ، خیابان اول ، پلاک
+                    ۲</span
+                  >
+                </p>
+                <p>
+                  <span class="text-secondary"> شماره تماس:</span>
+                  <span> 09055200000</span>
+                </p>
+                <p>
+                  <span class="text-secondary">تلفکس:</span>
+                  <span> 83 - 03142366380</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-black py-4">
+        <div
+          class="w-10/12 mx-auto text-white flex justify-between items-center lg:flex-row flex-col gap-4"
+        >
+          <p class="text-xs">
+            <span class="text-secondary">آدرس دفتر مرکزی:</span>
+            <span
+              >تهران خیابان شریعتی بعد از اتوبان همت ،برج باران، طبقه 15،
+              واحد1502۲</span
+            >
+          </p>
+          <p class="text-xs">
+            <span class="text-secondary">شماره تماس</span>
+            <span>09038000729</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
